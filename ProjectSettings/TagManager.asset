@@ -6,6 +6,18 @@ TagManager:
   tags:
   - Joystick
   - BulletDirection
+  - CheckCollider
+  - Enemy
+  - Bullet
+  - Weapon
+  - Candle
+  - HealthBar
+  - PlayerWeapon
+  - EnvironmentCollider
+  - EnemyHurtSource
+  - EnemyDeathSource
+  - EnvironmentSource
+  - PlayerSource
   layers:
   - Default
   - TransparentFX

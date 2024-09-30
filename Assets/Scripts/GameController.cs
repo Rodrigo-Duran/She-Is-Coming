@@ -114,7 +114,7 @@ public class GameController : MonoBehaviour
         // Pause Game
         if (GameIsOn)
         {
-            GameIsOn = false; 
+            GameIsOn = false;
             Time.timeScale = 0f;
             // Debug.Log("JOGO PAUSADO");
 
@@ -135,6 +135,40 @@ public class GameController : MonoBehaviour
             foreach (AudioSource audio in audios) audio.Play();
         }
     }
+
+   /* IEnumerator Pause()
+    {
+        yield return new WaitForSeconds(1f);
+        // Getting all looping AudioSources in the Scene
+        List<AudioSource> audios = new List<AudioSource>();
+        audios.Add(GameObject.FindGameObjectWithTag("PlayerSource").GetComponent<AudioSource>());
+        audios.Add(GameObject.FindGameObjectWithTag("EnvironmentSource").GetComponent<AudioSource>());
+
+
+        // Pause Game
+        if (GameIsOn)
+        {
+            GameIsOn = false;
+            Time.timeScale = 0f;
+            // Debug.Log("JOGO PAUSADO");
+
+            // Pausing all looping audios
+            foreach (AudioSource audio in audios) audio.Pause();
+
+
+        }
+
+        // Unpause Game
+        else
+        {
+            GameIsOn = true;
+            // Debug.Log("JOGO DESPAUSADO");
+            Time.timeScale = 1f;
+
+            // Unpausing all audio
+            foreach (AudioSource audio in audios) audio.Play();
+        }
+    }*/
 
     void StartGame()
     {
@@ -201,6 +235,18 @@ public class GameController : MonoBehaviour
         // Loading scene MainMenu
         SceneManager.LoadScene("MainMenu");
     }
+
+    /*IEnumerator Quit()
+    {
+        yield return new WaitForSeconds(1f);
+        // Desactivating the game
+        GameIsOn = false;
+        // Desactivating player objects corresponding to maria and joao
+        joao.SetActive(false);
+        maria.SetActive(false);
+        // Loading scene MainMenu
+        SceneManager.LoadScene("MainMenu");
+    }*/
 
     public void RestartGame()
     {

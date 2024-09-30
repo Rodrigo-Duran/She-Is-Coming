@@ -91,8 +91,8 @@ public class EnemyController : MonoBehaviour
 
     private void OnCollisionStay2D(Collision2D collision)
     {
-        // If the enemy is colliding with another enemy
-        if (collision.gameObject.tag == "Enemy")
+        // If the enemy is colliding with another enemy or the environment collider
+        if (collision.gameObject.tag == "Enemy" || collision.gameObject.tag == "EnvironmentCollider")
         {
             // Ignore this collision
             Physics2D.IgnoreCollision(enemyCollider, collision.gameObject.GetComponent<PolygonCollider2D>());

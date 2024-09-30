@@ -161,8 +161,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 523.9, y: -314.1}
-  m_SizeDelta: {x: 144.6999, y: 30}
+  m_AnchoredPosition: {x: 500.8833, y: -314.1}
+  m_SizeDelta: {x: 177.0199, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &42529667
 MonoBehaviour:
@@ -256,7 +256,7 @@ Animator:
   m_GameObject: {fileID: 42529665}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 54024c91f0e68d1418c8b07479bfd5b2, type: 2}
+  m_Controller: {fileID: 9100000, guid: a3bbf1a035d96e84399e2a7e488e1ec5, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -315,8 +315,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 380.9124, y: 366.8034}
+  m_AnchoredPosition: {x: 0, y: 4.3138}
+  m_SizeDelta: {x: 443.1517, y: 375.4311}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &146933331
 MonoBehaviour:
@@ -338,12 +338,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Joao e Maria estao fugindo da casa de doces da Bruxa Ma. Ela ira perseguir
-    as criancas por toda  a floresta, incessantemente, ate conseguir captura-las
-    e fazer deles seu jantar.
+  m_text: "Jo\xE3o e Maria est\xE3o fugindo da casa de doces da Bruxa M\xE1. Ela
+    ir\xE1 perseguir as crian\xE7as por toda a floresta incessantemente, at\xE9 conseguir
+    captur\xE1-las e fazer deles seu jantar."
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: e9ad26c3deee6cb42b1c1aaed3627073, type: 2}
-  m_sharedMaterial: {fileID: -3052174981844636338, guid: e9ad26c3deee6cb42b1c1aaed3627073, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8d6d4d0c548ca7b4ebb2aa0d84151994, type: 2}
+  m_sharedMaterial: {fileID: 1661895142150274790, guid: 8d6d4d0c548ca7b4ebb2aa0d84151994, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -377,7 +377,7 @@ MonoBehaviour:
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
-  m_characterSpacing: 0
+  m_characterSpacing: 5
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
@@ -429,9 +429,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd2ee1dff6833ec4aa594b1a9c6c78ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  portuguese: Joao e Maria estao fugindo da casa de doces da Bruxa Ma. Ela ira perseguir
-    as criancas por toda  a floresta, incessantemente, ate conseguir captura-las
-    e fazer deles seu jantar.
+  portuguese: "Jo\xE3o e Maria est\xE3o fugindo da casa de doces da Bruxa M\xE1.
+    Ela ir\xE1 perseguir as crian\xE7as por toda a floresta incessantemente, at\xE9
+    conseguir captur\xE1-las e fazer deles seu jantar."
   english: Hansel and Gretel are escaping from the Wicked Witch's candy house. She
     will chase the children all over  the forest, incessantly, until he manages to
     capture them and make them his dinner.
@@ -449,6 +449,7 @@ GameObject:
   - component: {fileID: 311647760}
   - component: {fileID: 311647762}
   - component: {fileID: 311647761}
+  - component: {fileID: 311647763}
   m_Layer: 5
   m_Name: History_1
   m_TagString: Untagged
@@ -515,6 +516,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 311647759}
   m_CullTransparentMesh: 1
+--- !u!95 &311647763
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 311647759}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 04187eb3b4940884c8b5af1c6ec6bf6b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &332939315
 GameObject:
   m_ObjectHideFlags: 0
@@ -550,8 +572,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 415.3711, y: 358.7464}
+  m_AnchoredPosition: {x: 0, y: 8.6277}
+  m_SizeDelta: {x: 477.6104, y: 376.0017}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &332939317
 MonoBehaviour:
@@ -573,12 +595,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Sobreviva o maximo de tempo que conseguir nessa floresta aterrorizante,
-    para que voce nao vire mais um fantasma ou cadaver neste local, procure por armas
-    e velas para se manter vivo. Boa Sorte !
+  m_text: "Sobreviva o m\xE1ximo de tempo que conseguir nessa floresta aterrorizante,
+    para que voc\xEA n\xE3o vire mais um fantasma ou cad\xE1ver neste local, procure
+    por armas e velas para se manter vivo. Boa Sorte !"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: e9ad26c3deee6cb42b1c1aaed3627073, type: 2}
-  m_sharedMaterial: {fileID: -3052174981844636338, guid: e9ad26c3deee6cb42b1c1aaed3627073, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8d6d4d0c548ca7b4ebb2aa0d84151994, type: 2}
+  m_sharedMaterial: {fileID: 1661895142150274790, guid: 8d6d4d0c548ca7b4ebb2aa0d84151994, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -612,7 +634,7 @@ MonoBehaviour:
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
-  m_characterSpacing: 0
+  m_characterSpacing: 5
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
@@ -656,9 +678,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd2ee1dff6833ec4aa594b1a9c6c78ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  portuguese: Sobreviva o maximo de tempo que conseguir nessa floresta aterrorizante,
-    para que voce nao vire mais um fantasma ou cadaver neste local, procure por armas
-    e velas para se manter vivo. Boa Sorte !
+  portuguese: "Sobreviva o m\xE1ximo de tempo que conseguir nessa floresta aterrorizante,
+    para que voc\xEA n\xE3o vire mais um fantasma ou cad\xE1ver neste local, procure
+    por armas e velas para se manter vivo. Boa Sorte !"
   english: Survive as long as you can in this terrifying forest, so that you don't
     become another ghost or corpse in this place, look for weapons and candles to
     stay alive. Good luck !
@@ -684,6 +706,7 @@ GameObject:
   - component: {fileID: 446951522}
   - component: {fileID: 446951524}
   - component: {fileID: 446951523}
+  - component: {fileID: 446951525}
   m_Layer: 5
   m_Name: History_3
   m_TagString: Untagged
@@ -750,6 +773,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 446951521}
   m_CullTransparentMesh: 1
+--- !u!95 &446951525
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 446951521}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 52b0ca16aa642c249b3ebaa03e9b3e6f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &525719010
 GameObject:
   m_ObjectHideFlags: 0
@@ -1263,10 +1307,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: JOAO
+  m_text: "JO\xC3O"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: e9ad26c3deee6cb42b1c1aaed3627073, type: 2}
-  m_sharedMaterial: {fileID: -3052174981844636338, guid: e9ad26c3deee6cb42b1c1aaed3627073, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8d6d4d0c548ca7b4ebb2aa0d84151994, type: 2}
+  m_sharedMaterial: {fileID: 1661895142150274790, guid: 8d6d4d0c548ca7b4ebb2aa0d84151994, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1300,7 +1344,7 @@ MonoBehaviour:
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
-  m_characterSpacing: 0
+  m_characterSpacing: 5
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
@@ -1352,7 +1396,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd2ee1dff6833ec4aa594b1a9c6c78ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  portuguese: JOAO
+  portuguese: "JO\xC3O"
   english: HANSEL
   isDropdown: 0
   portugueseOptions: []
@@ -1393,7 +1437,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 262}
-  m_SizeDelta: {x: 560.8563, y: 50}
+  m_SizeDelta: {x: 661.7223, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1152101501
 MonoBehaviour:
@@ -1417,8 +1461,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: ESCOLHA SEU PERSONAGEM
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: e9ad26c3deee6cb42b1c1aaed3627073, type: 2}
-  m_sharedMaterial: {fileID: -3052174981844636338, guid: e9ad26c3deee6cb42b1c1aaed3627073, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8d6d4d0c548ca7b4ebb2aa0d84151994, type: 2}
+  m_sharedMaterial: {fileID: 1661895142150274790, guid: 8d6d4d0c548ca7b4ebb2aa0d84151994, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1442,8 +1486,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 68
-  m_fontSizeBase: 68
+  m_fontSize: 60
+  m_fontSizeBase: 60
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1452,7 +1496,7 @@ MonoBehaviour:
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
-  m_characterSpacing: 0
+  m_characterSpacing: 5
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
@@ -1650,8 +1694,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: PRESSIONE PARA PULAR
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: e9ad26c3deee6cb42b1c1aaed3627073, type: 2}
-  m_sharedMaterial: {fileID: -3052174981844636338, guid: e9ad26c3deee6cb42b1c1aaed3627073, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: fad7096d63a8e7b42bf54fff98cd99e1, type: 2}
+  m_sharedMaterial: {fileID: -1569707597888746138, guid: fad7096d63a8e7b42bf54fff98cd99e1, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1675,8 +1719,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 20
-  m_fontSizeBase: 20
+  m_fontSize: 18
+  m_fontSizeBase: 18
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1685,7 +1729,7 @@ MonoBehaviour:
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
-  m_characterSpacing: 0
+  m_characterSpacing: 5
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
@@ -1753,6 +1797,7 @@ GameObject:
   - component: {fileID: 1441430994}
   - component: {fileID: 1441430996}
   - component: {fileID: 1441430995}
+  - component: {fileID: 1441430997}
   m_Layer: 5
   m_Name: History_2
   m_TagString: Untagged
@@ -1778,8 +1823,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -5}
+  m_SizeDelta: {x: 0, y: 10}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1441430995
 MonoBehaviour:
@@ -1819,6 +1864,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1441430993}
   m_CullTransparentMesh: 1
+--- !u!95 &1441430997
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1441430993}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8c5bb04954165c048a38d6a8f04624a7, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1527831721
 GameObject:
   m_ObjectHideFlags: 0
@@ -1854,8 +1920,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 415.3711, y: 358.7464}
+  m_AnchoredPosition: {x: 0, y: 2.8759}
+  m_SizeDelta: {x: 499.0721, y: 364.4982}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1527831723
 MonoBehaviour:
@@ -1877,12 +1943,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Encontrar o rumo de casa nao sera facil, pois alem do caminho escuro, a
-    floresta esta infestada pelos fantasmas e cadaveres amaldicoados das criancas
-    devoradas pela bruxa, que atacarao qualquer um, sem piedade!
+  m_text: "Encontrar o rumo de casa n\xE3o ser\xE1 f\xE1cil, pois al\xE9m do caminho
+    escuro, a floresta esta infestada pelos fantasmas e cad\xE1veres amaldi\xE7oados
+    das crian\xE7as devoradas pela bruxa, que atacar\xE3o qualquer um, sem piedade!"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: e9ad26c3deee6cb42b1c1aaed3627073, type: 2}
-  m_sharedMaterial: {fileID: -3052174981844636338, guid: e9ad26c3deee6cb42b1c1aaed3627073, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8d6d4d0c548ca7b4ebb2aa0d84151994, type: 2}
+  m_sharedMaterial: {fileID: 1661895142150274790, guid: 8d6d4d0c548ca7b4ebb2aa0d84151994, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1916,7 +1982,7 @@ MonoBehaviour:
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
-  m_characterSpacing: 0
+  m_characterSpacing: 5
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
@@ -1968,9 +2034,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd2ee1dff6833ec4aa594b1a9c6c78ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  portuguese: Encontrar o rumo de casa nao sera facil, pois alem do caminho escuro,
-    a floresta esta infestada pelos fantasmas e cadaveres amaldicoados das criancas
-    devoradas pela bruxa, que atacarao qualquer um, sem piedade!
+  portuguese: "Encontrar o rumo de casa n\xE3o ser\xE1 f\xE1cil, pois al\xE9m do
+    caminho escuro, a floresta esta infestada pelos fantasmas e cad\xE1veres amaldi\xE7oados
+    das crian\xE7as devoradas pela bruxa, que atacar\xE3o qualquer um, sem piedade!"
   english: Finding your way home won't be easy, because beyond the dark path, the
     forest is infested by the ghosts and cursed corpses of children devoured by the
     witch, who will attack anyone, without mercy!
@@ -2544,7 +2610,7 @@ Animator:
   m_GameObject: {fileID: 1848334006}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: d20ddc22a86cb0a45894d13b5110dd02, type: 2}
+  m_Controller: {fileID: 9100000, guid: 5b83a067047aefa4e8b8194473a23c2a, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -2699,7 +2765,7 @@ Animator:
   m_GameObject: {fileID: 1879169579}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: c269aef387ce5174482ffc4e4f907e99, type: 2}
+  m_Controller: {fileID: 9100000, guid: f51aea98b9654b243b4b14c60d9806d4, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -2770,8 +2836,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: MARIA
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: e9ad26c3deee6cb42b1c1aaed3627073, type: 2}
-  m_sharedMaterial: {fileID: -3052174981844636338, guid: e9ad26c3deee6cb42b1c1aaed3627073, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8d6d4d0c548ca7b4ebb2aa0d84151994, type: 2}
+  m_sharedMaterial: {fileID: 1661895142150274790, guid: 8d6d4d0c548ca7b4ebb2aa0d84151994, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

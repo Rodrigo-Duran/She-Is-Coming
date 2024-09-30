@@ -56,18 +56,24 @@ public class PreGameController : MonoBehaviour
         history0.SetActive(false);
         history1.SetActive(true);
         Debug.Log("History 1 active");
-        // After 5 seconds, switch to the next chapter of the history
-        yield return new WaitForSeconds(5f);
+        // After 8 seconds, play the fade out animation of the current chapter and after 2 seconds switch to the next chapter of the story
+        yield return new WaitForSeconds(8f);
+        history1.GetComponent<Animator>().Play("FadeOut");
+        yield return new WaitForSeconds(2f);
         history1.SetActive(false);
         history2.SetActive(true);
         Debug.Log("History 2 active");
-        // After 5 seconds, switch to the next chapter of the history
-        yield return new WaitForSeconds(5f);
+        // After 8 seconds, play the fade out animation of the current chapter and after 2 seconds switch to the next chapter of the story
+        yield return new WaitForSeconds(8f);
+        history2.GetComponent<Animator>().Play("FadeOut");
+        yield return new WaitForSeconds(2f);
         history2.SetActive(false);
         history3.SetActive(true); 
         Debug.Log("History 3 active");
-        // After 5 seconds, switch to the character selection
-        yield return new WaitForSeconds(5f);
+        // After 8 seconds, play the fade out animation of the current chapter and after 2 seconds switch to the character selection
+        yield return new WaitForSeconds(8f);
+        history3.GetComponent<Animator>().Play("FadeOut");
+        yield return new WaitForSeconds(2f);
         ChooseCharacterPanel();
     }
 

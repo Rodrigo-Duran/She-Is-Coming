@@ -8,5 +8,5 @@ public class Weapon : ScriptableObject
     // Components of the Scriptable Object
     public int damage;
     public Sprite sprite;
-    public float timeToExpire;
+    public int shotsCount;
 }

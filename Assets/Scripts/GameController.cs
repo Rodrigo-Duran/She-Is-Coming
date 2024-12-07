@@ -28,6 +28,11 @@ public class GameController : MonoBehaviour
     // Weapons' spawn
     [SerializeField] private List<Weapon> weaponsList = new List<Weapon>();
     [SerializeField] private List<GameObject> weaponsSpots = new List<GameObject>();
+    public List<GameObject> _weaponsSpots
+    {
+        get { return weaponsSpots; }
+        set { weaponsSpots = value; }
+    }
     [SerializeField] private GameObject weapon;
 
     // Candles' spawn
@@ -40,6 +45,7 @@ public class GameController : MonoBehaviour
     [SerializeField] private TextMeshProUGUI waveCount;
     [SerializeField] private TextMeshProUGUI timerLabel;
     [SerializeField] private GameObject gameOverPanel;
+    [SerializeField] private GameObject roundController;
 
     // Timer
     private float timer;
@@ -136,40 +142,6 @@ public class GameController : MonoBehaviour
         }
     }
 
-   /* IEnumerator Pause()
-    {
-        yield return new WaitForSeconds(1f);
-        // Getting all looping AudioSources in the Scene
-        List<AudioSource> audios = new List<AudioSource>();
-        audios.Add(GameObject.FindGameObjectWithTag("PlayerSource").GetComponent<AudioSource>());
-        audios.Add(GameObject.FindGameObjectWithTag("EnvironmentSource").GetComponent<AudioSource>());
-
-
-        // Pause Game
-        if (GameIsOn)
-        {
-            GameIsOn = false;
-            Time.timeScale = 0f;
-            // Debug.Log("JOGO PAUSADO");
-
-            // Pausing all looping audios
-            foreach (AudioSource audio in audios) audio.Pause();
-
-
-        }
-
-        // Unpause Game
-        else
-        {
-            GameIsOn = true;
-            // Debug.Log("JOGO DESPAUSADO");
-            Time.timeScale = 1f;
-
-            // Unpausing all audio
-            foreach (AudioSource audio in audios) audio.Play();
-        }
-    }*/
-
     void StartGame()
     {
         // Resetting all global variables for the first round
@@ -236,18 +208,6 @@ public class GameController : MonoBehaviour
         SceneManager.LoadScene("MainMenu");
     }
 
-    /*IEnumerator Quit()
-    {
-        yield return new WaitForSeconds(1f);
-        // Desactivating the game
-        GameIsOn = false;
-        // Desactivating player objects corresponding to maria and joao
-        joao.SetActive(false);
-        maria.SetActive(false);
-        // Loading scene MainMenu
-        SceneManager.LoadScene("MainMenu");
-    }*/
-
     public void RestartGame()
     {
         // Desactivating the game
@@ -263,7 +223,18 @@ public class GameController : MonoBehaviour
     {
         // Desactivating the game
         Time.timeScale = 0f;
-        GameIsOn = false;
+        StartCoroutine("FinishingGame");
+    }
+
+    IEnumerator FinishingGame()
+    {
+        yield return new WaitForSecondsRealtime(1f);
+
+        AudioSource[] audioSources = FindObjectsOfType<AudioSource>();
+        foreach (AudioSource audio in audioSources) audio.Stop();
+
+        yield return new WaitForSecondsRealtime(1f);
+
         // Opening the Game Over panel
         gameOverPanel.SetActive(true);
     }
@@ -306,12 +277,18 @@ public class GameController : MonoBehaviour
     // Coroutine to start the round change process
     IEnumerator NextWave()
     {
+        Debug.Log("TROCANDO ROUND");
+        // TOCAR ANIMAÇÃO DE TROCA DE ROUND
+        roundController.GetComponent<Animator>().SetInteger("transition", 1);
+        // ESPERAR ANIMAÇÃO ACABAR
+        yield return new WaitForSeconds(4.1f);
         // Increase the round value by one
         wave++;
+        Debug.Log("PROXIMO ROUND!!!");
         // If the round value is less then 10, increase the enemies' life by 2, otherwise, if it is greater than 10, increase it by 1 only
-        if(wave <= 10) enemyBasicLife += 2;
+        if (wave <= 10) enemyBasicLife += 2;
         else enemyBasicLife += 1;
-        // Starting the round counter
+       /* // Starting the round counter
         waveCount.text = 3.ToString();
         nextWavePanel.SetActive(true);
         yield return new WaitForSeconds(1f);
@@ -320,7 +297,7 @@ public class GameController : MonoBehaviour
         waveCount.text = 1.ToString();
         yield return new WaitForSeconds(1f);
         nextWavePanel.SetActive(false);
-        // Release the start of the next round
+        // Release the start of the next round*/
         nextWave = true;
     }
 
@@ -336,13 +313,20 @@ public class GameController : MonoBehaviour
         // Choose a random weapon from the list of weapons scriptable objects
         Weapon weaponToSpawn = weaponsList[Random.Range(0, weaponsList.Capacity)];
         // Choose a random spawn point in weaponsSpots' list
+        //int spot = Random.Range(0, weaponsSpots.Capacity);
+       // GameObject weaponSpot = new GameObject();
         int spot = Random.Range(0, weaponsSpots.Capacity);
+        GameObject weaponSpot = weaponsSpots[spot];
+        weaponsSpots.RemoveAt(spot);
+        weapon.GetComponent<WeaponController>().spawnPoint = weaponSpot;
+        weapon.GetComponent<WeaponController>().gameController = this;
+
         // Determines the weapon type of the object that will be instantiated
         weapon.GetComponent<WeaponController>().weapon = weaponToSpawn;
         // Instantiate the weapon object, at the chosen spawn point, with a rotation of 28 degrees in z
-        Instantiate(weapon, weaponsSpots[spot].transform.position, Quaternion.Euler(0, 0, 28));
+        Instantiate(weapon, weaponSpot.transform.position, Quaternion.Euler(0, 0, 28));
         //Debug.Log("Arma spawnada");
-        
+
         yield return new WaitForSeconds(2f);
 
         // Restart the coroutine
@@ -374,7 +358,7 @@ public class GameController : MonoBehaviour
     #endregion
 
     #region FireHandler
-
+/*
     // Method called by the attack button
     public void Fire()
     {
@@ -403,7 +387,7 @@ public class GameController : MonoBehaviour
             }
         }
     }
-
+*/
     #endregion
 
     #region LanguageHandler

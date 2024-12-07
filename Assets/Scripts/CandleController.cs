@@ -5,6 +5,9 @@ using UnityEngine;
 public class CandleController : MonoBehaviour
 {
 
+    // Access to the SpawnPoint
+    //public SpawnPointsController spawnPointsController;
+
     #region MainMethods
 
     void Awake()
@@ -21,6 +24,7 @@ public class CandleController : MonoBehaviour
     {
         yield return new WaitForSeconds(10f);
         Destroy(gameObject);
+        //spawnPointsController.isEmpty = true;
     }
 
     #endregion

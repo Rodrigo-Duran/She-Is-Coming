@@ -18,6 +18,8 @@ TagManager:
   - EnemyDeathSource
   - EnvironmentSource
   - PlayerSource
+  - PlayerLightCircle
+  - SpawnPoint
   layers:
   - Default
   - TransparentFX
@@ -25,7 +27,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - Player
   - 
   - 
   - 

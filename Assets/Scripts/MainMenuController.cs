@@ -61,7 +61,7 @@ public class MainMenuController : MonoBehaviour
 
     IEnumerator LoadPreGameScene()
     {
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.01f);
         SceneManager.LoadScene("PreGame");
     }
 
@@ -76,7 +76,7 @@ public class MainMenuController : MonoBehaviour
 
     IEnumerator HandleCredits(string action)
     {
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.01f);
         if (action == "in") 
         {
             mainMenuPanel.SetActive(false);
@@ -100,7 +100,7 @@ public class MainMenuController : MonoBehaviour
 
     IEnumerator HandleConfigurations(string action)
     {
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.01f);
         if (action == "in")
         {
             mainMenuPanel.SetActive(false);
@@ -111,6 +111,15 @@ public class MainMenuController : MonoBehaviour
             configurationsPanel.SetActive(false);
             mainMenuPanel.SetActive(true);
         }
+    }
+
+    #endregion
+
+    #region QuitButton
+
+    public void QuitGame()
+    {
+        Application.Quit();
     }
 
     #endregion

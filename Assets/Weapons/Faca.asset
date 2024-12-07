@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 5
   sprite: {fileID: 21300000, guid: 0d6de573266d9af4395f7de20cd2e016, type: 3}
-  timeToExpire: 8
+  shotsCount: 3
